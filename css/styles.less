@@ -47,226 +47,227 @@ body {
 	width: 1000px;
     margin: 0 auto;
 	padding: 10px 12px 0 14px;
-	
-	header {
-		overflow: hidden;
-		position: relative;
-		
-		.header__logo { 
-			background-image: url('../images/logo.png');
-			width: 260px;
-			height: 125px;
-			float: left;
-			margin-left: 10px;
-			margin-top: -16px;
-		}
+}
 
-		.header__contacts {
-			float: left;
-			width: 210px;
-			margin-left: 155px;
-		}
+.header {
+    overflow: hidden;
+    position: relative;
 
-		.header__email { 
-			float: left;
-			margin-top: 2px;
-		}
+    &__logo {
+        background-image: url('../images/logo.png');
+        width: 260px;
+        height: 125px;
+        float: left;
+        margin-left: 10px;
+        margin-top: -16px;
+    }
 
-		.header__call {
-			background: url('../images/call.png')  0 0 no-repeat;
-			width: 213px;
-			height: 112px;
-			position: absolute;
-			right: 15px;
-			bottom: 0;		
-		}
+    &__contacts {
+        float: left;
+        width: 210px;
+        margin-left: 155px;
+    }
 
-        .header__small-text {
-          font: 12px Tahoma Bold, sans-serif;
-          color: @blue;
-          margin-bottom: 3px;
+    &__email {
+        float: left;
+        margin-top: 2px;
+    }
+
+    &__call {
+        background: url('../images/call.png')  0 0 no-repeat;
+        width: 213px;
+        height: 112px;
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+    }
+
+    &__small-text {
+      font: 12px Tahoma Bold, sans-serif;
+      color: @blue;
+      margin-bottom: 3px;
+    }
+
+    &__big-text {
+      font: 18px Tahoma Bold, sans-serif;
+      color: @blue;
+    }
+}
+
+.content {
+    background: url('../images/bgtop.png') 0 0 no-repeat;
+    padding-bottom: 20px;
+
+    .aside {
+        width: 230px;
+        float: left;
+        overflow: hidden;
+        margin-right: 23px;
+
+        &-list {
+        list-style-position: inside;
+        list-style-image: url('../images/menu-item.png');
+                .aside-list__item {
+                    border-bottom: 1px solid @white;
+                    height: 50px;
+                    padding-left: 10px;
+
+                    &:hover {background-color: #DAE2E2;}
+
+                    a {
+                    display: inline-block;
+                    font: 14px Tahoma, sans-serif;
+                    margin: 14px 17px;
+
+                        &:hover {
+                        text-decoration: none;
+                        cursor: pointer;
+                        }
+                    }
+                }
         }
 
-        .header__big-text {
-          font: 18px Tahoma Bold, sans-serif;
-          color: @blue;
-        }
-	}
-
-	.content {
-		background: url('../images/bgtop.png') 0 0 no-repeat;
-		padding-bottom: 20px;
-	
-		.aside {
-			width: 230px;
-			float: left;
-			overflow: hidden;
-			margin-right: 23px;
-			
-			.aside-list {
-			list-style-position: inside;
-			list-style-image: url('../images/menu-item.png');
-					.aside-list__item {
-                        border-bottom: 1px solid @white;
-                        height: 50px;
-                        padding-left: 10px;
-
-						&:hover {background-color: #DAE2E2;}
-
-					    a {
-						display: inline-block;
-						font: 14px Tahoma, sans-serif;	
-						margin: 14px 17px;
-
-							&:hover {
-							text-decoration: none;
-							cursor: pointer;
-							}
-						}
-					}
-			}
-
-            .aside__heading  {
-              height: 47px;
-              background-color: #F5FAFC;
-            }
-
-			.cert {
-				.border-main ();
-				height: 220px;
-				margin-top: 43px;
-				overflow: hidden;
-
-				.cert__content {
-					background-color: @gray;
-				
-					img {
-					margin: 14px 59px;
-					
-					}
-				}
-			}
-			.producers {
-				margin-top: 15px;
-				overflow: hidden;
-				height: 220px;
-				.border-main ();
-
-				.producers__content {
-					display: block;
-					background-color: @gray;
-					
-					.producers__list {
-						float: left;
-						list-style: none;
-						margin: 17px -7px;
-						&:nth-child(2) {border-left: 1px solid #CAD6DC;}
-
-						.producers__list-item {margin: 0 12px;}
-					}
-				}
-			}
-		}
-		.newsline {
-			overflow: hidden;
-
-            .newsline__item {
-              background-color: @white;
-              height: 195px;
-              margin: 10px 14px 7px 0;
-
-              .border-main ();
-
-
-              .newsline__heading {
-                border-bottom: 1px solid #B9C5CA;
-                margin: 0 0 10px 20px;
-              }
-
-              .newsline__text {
-                margin: 9px 26px 10px 0;
-                font: 12px/13px Tahoma, sans-serif;
-              }
-
-              .newsline__photo {
-                height: 177px;
-                width: 196px;
-                padding-right: 17px;
-                float: left;
-                margin: 11px 0 0 12px;
-              }
-
-              .newsline__photo1 {
-                background: @white url('../images/1.png') 0 0 no-repeat;
-              }
-              .newsline__photo2 {
-                background: @white url('../images/1-02.png') 0 0 no-repeat;
-              }
-              .newsline__photo3 {
-                background: @white url('../images/ladder.png') 0 0 no-repeat;
-              }
-
-              .newsline__more {
-                font: 12px Tahoma, sans-serif;
-                color: @blue;
-                float: right;
-                margin: 0 10px 12px 0;
-
-                &:hover {text-decoration: underline; cursor: pointer}
-              }
-
-            }
-            .newsline__article {
-              display: block;
-              margin-top: 10px;
-              cursor: pointer;
-            }
+        &__heading  {
+          height: 47px;
+          background-color: #F5FAFC;
         }
 
-        .gallery {
-            .border-main();
-
-            margin-top: 45px;
+        .cert {
+            .border-main ();
+            height: 220px;
+            margin-top: 43px;
             overflow: hidden;
 
-            .gallery__heading {
-                height: 45px;
-                background-color: @gray;
-            }
-
-            .gallery__list {
-                overflow: hidden;
+            &__content {
                 background-color: @gray;
 
-                  .gallery__image {
-                    list-style: none;
-                    float: left;
-                    margin: 14px 0 0 15px;
-                  }
-            }
-	    }
+                img {
+                margin: 14px 59px;
 
-	footer {
-      .footer__nav {
-            margin-top: 27px;
-			overflow: hidden;
-			zoom: 1;
-			list-style: none;
-			text-align: center;
-
-				.footer__link {
-					display: inline-block;
-					border-left: 1px solid @blue;
-					padding: 0 5px;
-					margin-bottom: 24px;
-					&:first-child {border-left: none;} 
                 }
+            }
+        }
+        .producers {
+            margin-top: 15px;
+            overflow: hidden;
+            height: 220px;
+            .border-main ();
+
+            &__content {
+                display: block;
+                background-color: @gray;
+
+                &__list {
+                    float: left;
+                    list-style: none;
+                    margin: 17px -7px;
+                    &:nth-child(2) {border-left: 1px solid #CAD6DC;}
+
+                    .producers__list-item {margin: 0 12px;}
+                }
+            }
+        }
+    }
+    .newsline {
+        overflow: hidden;
+
+        &__item {
+          background-color: @white;
+          height: 195px;
+          margin: 10px 14px 7px 0;
+        }
+
+        .border-main ();
+
+
+        &__heading {
+          border-bottom: 1px solid #B9C5CA;
+          margin: 0 0 10px 20px;
+        }
+
+        &__text {
+          margin: 9px 26px 10px 0;
+          font: 12px/13px Tahoma, sans-serif;
+        }
+
+        &__photo {
+          height: 177px;
+          width: 196px;
+          padding-right: 17px;
+          float: left;
+          margin: 11px 0 0 12px;
+        }
+
+        &__photo1 {
+          background: @white url('../images/1.png') 0 0 no-repeat;
+        }
+        &__photo2 {
+          background: @white url('../images/1-02.png') 0 0 no-repeat;
+        }
+        &__photo3 {
+          background: @white url('../images/ladder.png') 0 0 no-repeat;
+        }
+
+        &__more {
+          font: 12px Tahoma, sans-serif;
+          color: @blue;
+          float: right;
+          margin: 0 10px 12px 0;
+
+          &:hover {text-decoration: underline; cursor: pointer}
+        }
+
+
+        &__article {
+          display: block;
+          margin-top: 10px;
+          cursor: pointer;
         }
     }
 
-		.footer__copy {
-			text-align: center;
-			margin-bottom: 45px;
-		}
-	}
+    .gallery {
+        .border-main();
+
+        margin-top: 45px;
+        overflow: hidden;
+
+        &__heading {
+            height: 45px;
+            background-color: @gray;
+        }
+
+        .gallery__list {
+            overflow: hidden;
+            background-color: @gray;
+
+              .gallery__image {
+                list-style: none;
+                float: left;
+                margin: 14px 0 0 15px;
+              }
+        }
+    }
+
+.footer {
+  &__nav {
+        margin-top: 27px;
+        overflow: hidden;
+        zoom: 1;
+        list-style: none;
+        text-align: center;
+
+            .footer__link {
+                display: inline-block;
+                border-left: 1px solid @blue;
+                padding: 0 5px;
+                margin-bottom: 24px;
+                &:first-child {border-left: none;}
+            }
+    }
+}
+
+  .footer__copy {
+      text-align: center;
+      margin-bottom: 45px;
+  }
 }
